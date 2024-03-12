@@ -34,7 +34,7 @@ export class Marker3DAnimation extends Animation{
 
         // AJOUT DU REPERE
         console.log("Ajout du repère à la scène")
-        this.marker = new Marker(250,250,0.5,0.3)
+        this.marker = new Marker(250,250,0.7,0.5)
         this.marker.addScene(this.scene)
 
         this.sizes = {
@@ -47,9 +47,9 @@ export class Marker3DAnimation extends Animation{
         this.scene.add( this.hemiLight )
 
         this.camera = new THREE.PerspectiveCamera(75, this.sizes.width / this.sizes.height, 0.1, 700)
-        this.camera.position.z = 50
+        this.camera.position.z = 100
         this.camera.position.y = 10
-        this.camera.position.x = 50
+        this.camera.position.x = 3
         this.scene.add(this.camera)
 
         this.controls = new OrbitControls(this.camera, this.canvas)
@@ -64,8 +64,8 @@ export class Marker3DAnimation extends Animation{
 
         let bloomPass = new UnrealBloomPass(
             new THREE.Vector2(this.sizes.width, this.sizes.height),
-            0.7,
-            0.7,
+            0.4,
+            0.8,
             0.1
         )
         this.effectComposer.addPass(bloomPass)

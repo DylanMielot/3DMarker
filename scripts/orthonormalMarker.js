@@ -21,7 +21,7 @@ export class Marker{
 
         this.brutEquation
         this.equation
-        this.setEquation("tan((10x^2 + z^4) * 0.00009 - time/20) * 5")//("cos((x**2 + z**2)/1000 - time*1.5) * 10")
+        this.setEquation("cos((x**2 + z**2)/1000 - time*1.5) * 10")
         this.newYPosition = Function("x = 0", "z = 0", "time = 0", "return " + this.equation)
 
         this.createBufferGeometry()
