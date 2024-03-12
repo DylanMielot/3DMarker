@@ -16,7 +16,7 @@ html, body{
 #settings{
   position : absolute;
   top : 50%;
-  left: -430px;
+  left: -445px;
   transform: translateY(-50%);
   height: 80%;
   width: 450px;
@@ -25,16 +25,17 @@ html, body{
   background-color: rgb(255, 255, 255);
   opacity : 0.6;
   border-radius: 0 5% 5% 0;
+  transition: all ease-in-out 0.2s;
 }
 #settings #close {
   padding:5px;
   position: absolute;
   height: 100px;
-  width: 40px;
-  right: -27px;
+  width: 30px;
+  right: -30px;
   top : 50%;
   transform: translateY(-50%);
-  background-image: url('/public/images/settings.png');
+  background-image: url('./public/images/settings.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
