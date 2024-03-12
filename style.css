@@ -1,0 +1,93 @@
+* {
+  margin:0;
+}
+
+html, body{
+    margin:0;
+    height:100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+}
+
+#canvas2{
+  position : absolute;
+}
+
+#time{
+  position:absolute;
+  height : 30px;
+  top: 20px;
+  left: 10px;
+  color : grey;
+  font-weight: bold;
+  display : flex;
+}
+#resetTime{
+  background-image: url("../images/reset.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  filter:invert(1);
+  opacity:0.5;
+  width:30px;
+  height:30px;
+  cursor:pointer;
+  margin-right:5px;
+  transform: translateY(-5px);
+}
+
+#currentEquation{
+  position:absolute;
+  height : 30px;
+  top: 20px;
+  left: 50%;
+  color : grey;
+  font-weight: bold;
+}
+
+#equationBloc{
+    position:absolute;
+  
+    bottom : 3vh;
+    left:50%;
+    transform:translateX(-50%);
+    height : 45px;
+    width : 80%;
+  
+    border-radius:15px;
+    border: black 2px solid;
+    background-color: rgb(255, 255, 255);
+  
+    opacity : 0.6;
+    display:flex;
+    align-items:center;
+  }
+  
+  #equationBloc div {
+    margin:auto;
+    font-weight: bold;
+    width:100%;
+    text-align:center;
+  }
+  
+  #equation {
+    font-weight: bold;
+    font-size: 16px;
+    height : 20px;
+    width : 80%;
+    border : 0;
+  border-bottom: 1px solid black;
+  }
+  
+  #equation:focus, #equation:not(:focus):valid{
+  outline: none !important;
+  }
+  
+  #error{
+    position : absolute;
+    bottom:80px;
+    left:50%;
+    transform:translateX(-50%);
+    background-color:yellow;
+    color:red;
+  }
+  
