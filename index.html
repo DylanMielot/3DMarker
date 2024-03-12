@@ -19,8 +19,39 @@
             </div>
         </div>
         <p id="error"></p>
+
+        <div id="settings" ishidden>
+            <div id="close"></div>
+        </div>
         
 
 		<script type="module" src="/main.js"></script>
+
+        
+        <script>
+            //Gère la fenêtre des settings
+            let settings = document.querySelector("#settings")
+            let closeButton = document.querySelector("#close")
+            let canvas = document.querySelector("#canvas2")
+
+            closeButton.addEventListener("click", ()=>{
+                settings.toggleAttribute("ishidden")
+
+                if(settings.hasAttribute("ishidden")){
+                    settings.style.left = "-430px"
+                    canvas.style.filter = "blur(0px)"
+                } else {
+                    settings.style.left = "10px"
+                    canvas.style.filter = "blur(2px)"
+                }
+            })
+
+            canvas.addEventListener("click", ()=>{
+                if(!settings.hasAttribute("ishidden")){
+                    closeButton.click()
+                }
+            })
+        </script>
+
 	</body>
 </html>
